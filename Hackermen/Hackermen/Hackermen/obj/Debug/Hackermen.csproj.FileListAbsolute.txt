@@ -1,0 +1,10 @@
+C:\Users\Dimitar\Desktop\Hackermen\Hackermen\Hackermen\obj\Debug\Hackermen.csprojResolveAssemblyReference.cache
+C:\Users\Dimitar\Desktop\Hackermen\Hackermen\Hackermen\obj\Debug\Hackermen.Form1.resources
+C:\Users\Dimitar\Desktop\Hackermen\Hackermen\Hackermen\obj\Debug\Hackermen.Properties.Resources.resources
+C:\Users\Dimitar\Desktop\Hackermen\Hackermen\Hackermen\obj\Debug\Hackermen.csproj.GenerateResource.cache
+C:\Users\Dimitar\Desktop\Hackermen\Hackermen\Hackermen\obj\Debug\Hackermen.csproj.CoreCompileInputs.cache
+C:\Users\Dimitar\Desktop\Hackermen\Hackermen\Hackermen\bin\Debug\Hackermen.exe.config
+C:\Users\Dimitar\Desktop\Hackermen\Hackermen\Hackermen\bin\Debug\Hackermen.exe
+C:\Users\Dimitar\Desktop\Hackermen\Hackermen\Hackermen\bin\Debug\Hackermen.pdb
+C:\Users\Dimitar\Desktop\Hackermen\Hackermen\Hackermen\obj\Debug\Hackermen.exe
+C:\Users\Dimitar\Desktop\Hackermen\Hackermen\Hackermen\obj\Debug\Hackermen.pdb
