@@ -33,6 +33,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.GBStart = new System.Windows.Forms.GroupBox();
+            this.BStart = new System.Windows.Forms.Button();
             this.HackerManPic = new System.Windows.Forms.PictureBox();
             this.Enemy3Pic = new System.Windows.Forms.PictureBox();
             this.Enemy2Pic = new System.Windows.Forms.PictureBox();
@@ -42,6 +44,7 @@
             this.Stone3 = new System.Windows.Forms.PictureBox();
             this.Stone2 = new System.Windows.Forms.PictureBox();
             this.Stone1 = new System.Windows.Forms.PictureBox();
+            this.GBStart.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HackerManPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Enemy3Pic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Enemy2Pic)).BeginInit();
@@ -73,9 +76,27 @@
             // 
             // timer1
             // 
-            this.timer1.Enabled = true;
             this.timer1.Interval = 20;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // GBStart
+            // 
+            this.GBStart.Controls.Add(this.BStart);
+            this.GBStart.Location = new System.Drawing.Point(-6, 0);
+            this.GBStart.Name = "GBStart";
+            this.GBStart.Size = new System.Drawing.Size(688, 461);
+            this.GBStart.TabIndex = 16;
+            this.GBStart.TabStop = false;
+            // 
+            // BStart
+            // 
+            this.BStart.Location = new System.Drawing.Point(295, 205);
+            this.BStart.Name = "BStart";
+            this.BStart.Size = new System.Drawing.Size(75, 23);
+            this.BStart.TabIndex = 0;
+            this.BStart.Text = "start";
+            this.BStart.UseVisualStyleBackColor = true;
+            this.BStart.Click += new System.EventHandler(this.BStart_Click);
             // 
             // HackerManPic
             // 
@@ -96,6 +117,7 @@
             this.Enemy3Pic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Enemy3Pic.TabIndex = 11;
             this.Enemy3Pic.TabStop = false;
+            this.Enemy3Pic.Tag = "enemy";
             // 
             // Enemy2Pic
             // 
@@ -106,6 +128,7 @@
             this.Enemy2Pic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Enemy2Pic.TabIndex = 10;
             this.Enemy2Pic.TabStop = false;
+            this.Enemy2Pic.Tag = "enemy";
             // 
             // Enemy1Pic
             // 
@@ -116,6 +139,7 @@
             this.Enemy1Pic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Enemy1Pic.TabIndex = 9;
             this.Enemy1Pic.TabStop = false;
+            this.Enemy1Pic.Tag = "enemy";
             // 
             // Stone5
             // 
@@ -163,7 +187,7 @@
             this.Stone1.Image = ((System.Drawing.Image)(resources.GetObject("Stone1.Image")));
             this.Stone1.Location = new System.Drawing.Point(94, 0);
             this.Stone1.Name = "Stone1";
-            this.Stone1.Size = new System.Drawing.Size(15, 341);
+            this.Stone1.Size = new System.Drawing.Size(15, 326);
             this.Stone1.TabIndex = 0;
             this.Stone1.TabStop = false;
             this.Stone1.Tag = "wall";
@@ -173,6 +197,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 461);
+            this.Controls.Add(this.GBStart);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.HackerManPic);
@@ -188,6 +213,7 @@
             this.Text = "HackerMan";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
+            this.GBStart.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.HackerManPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Enemy3Pic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Enemy2Pic)).EndInit();
@@ -216,6 +242,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.GroupBox GBStart;
+        private System.Windows.Forms.Button BStart;
     }
 }
 
