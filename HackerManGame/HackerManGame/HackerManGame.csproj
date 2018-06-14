@@ -83,9 +83,6 @@
     <None Include="Resources\Enemy2.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\7500462368807.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Enemy3.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -93,6 +90,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\HackermanPicRight.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Computer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\qustion1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\qustion2.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

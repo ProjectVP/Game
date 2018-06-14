@@ -63,9 +63,9 @@ namespace HackerManGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _7500462368807 {
+        internal static System.Drawing.Bitmap Computer {
             get {
-                object obj = ResourceManager.GetObject("_7500462368807", resourceCulture);
+                object obj = ResourceManager.GetObject("Computer", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -106,6 +106,26 @@ namespace HackerManGame.Properties {
         internal static System.Drawing.Bitmap HackermanPicRight {
             get {
                 object obj = ResourceManager.GetObject("HackermanPicRight", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap qustion1 {
+            get {
+                object obj = ResourceManager.GetObject("qustion1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap qustion2 {
+            get {
+                object obj = ResourceManager.GetObject("qustion2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -21,6 +21,8 @@ namespace HackerManGame
         int enemy2 = 6;
         int enemy3 = 8;
         int score = 0;
+
+        bool question = true;
         public Form1()
         {
             InitializeComponent();
@@ -29,6 +31,7 @@ namespace HackerManGame
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            
             label1.Text = "Score: " + score;
             if (goleft)
             {
@@ -82,6 +85,59 @@ namespace HackerManGame
                 enemy3 = -enemy3;
             }
 
+            foreach (Control x in this.Controls)
+            {
+                if (x is PictureBox &&  x.Tag == "enemy")
+                {
+                    if (x.Bounds.IntersectsWith(HackerManPic.Bounds))
+                    {
+                        HackerManPic.Left = 0;
+                        HackerManPic.Top = 5;
+                        score = 0;
+                        timer1.Stop();
+                        if (MessageBox.Show("Play Again", "End Game", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.No)
+                        {
+                            GBStart.Visible = true;
+                            GBStart.Enabled = true;
+                            
+                                                 
+                        }
+                        else
+                        {
+                            GBStart.Visible = false;
+                            GBStart.Enabled =false;
+                            timer1_Tick(sender, e);
+                            timer1.Start();
+
+
+                        }
+
+                    }
+                }
+                /*if (x is PictureBox && x.Tag == "question")
+                {
+                    if (question == true)
+                    {
+                        question = false;
+                        PBQuestion1.Image = Properties.Resources.qustion1;
+                        PBQuestion2.Image = Properties.Resources.qustion1;
+                        PBQuestion3.Image = Properties.Resources.qustion1;
+                        PBQuestion4.Image = Properties.Resources.qustion1;
+                    }
+                    else
+                    {
+                        question = true;
+                        PBQuestion1.Image = Properties.Resources.qustion2;
+                        PBQuestion2.Image = Properties.Resources.qustion2;
+                        PBQuestion3.Image = Properties.Resources.qustion2;
+                        PBQuestion4.Image = Properties.Resources.qustion2;
+                    }
+                }
+                */
+
+            }
+
+
 
 
         }
@@ -133,6 +189,11 @@ namespace HackerManGame
 
         }
 
-       
+        private void BStart_Click(object sender, EventArgs e)
+        {
+            GBStart.Visible = false;
+            GBStart.Enabled = false;
+            timer1.Start();
+        }
     }
 }
