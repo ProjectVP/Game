@@ -33,8 +33,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.GBStart = new System.Windows.Forms.GroupBox();
-            this.BStart = new System.Windows.Forms.Button();
             this.HackerManPic = new System.Windows.Forms.PictureBox();
             this.Enemy3Pic = new System.Windows.Forms.PictureBox();
             this.Enemy2Pic = new System.Windows.Forms.PictureBox();
@@ -44,7 +42,16 @@
             this.Stone3 = new System.Windows.Forms.PictureBox();
             this.Stone2 = new System.Windows.Forms.PictureBox();
             this.Stone1 = new System.Windows.Forms.PictureBox();
-            this.GBStart.SuspendLayout();
+            this.PBQuestion1 = new System.Windows.Forms.PictureBox();
+            this.PBQuestion2 = new System.Windows.Forms.PictureBox();
+            this.PBQuestion3 = new System.Windows.Forms.PictureBox();
+            this.GBStart = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.BStart = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.HackerManPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Enemy3Pic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Enemy2Pic)).BeginInit();
@@ -54,6 +61,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.Stone3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Stone2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Stone1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBQuestion1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBQuestion2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBQuestion3)).BeginInit();
+            this.GBStart.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -78,25 +92,6 @@
             // 
             this.timer1.Interval = 20;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // GBStart
-            // 
-            this.GBStart.Controls.Add(this.BStart);
-            this.GBStart.Location = new System.Drawing.Point(-6, 0);
-            this.GBStart.Name = "GBStart";
-            this.GBStart.Size = new System.Drawing.Size(688, 461);
-            this.GBStart.TabIndex = 16;
-            this.GBStart.TabStop = false;
-            // 
-            // BStart
-            // 
-            this.BStart.Location = new System.Drawing.Point(295, 205);
-            this.BStart.Name = "BStart";
-            this.BStart.Size = new System.Drawing.Size(75, 23);
-            this.BStart.TabIndex = 0;
-            this.BStart.Text = "start";
-            this.BStart.UseVisualStyleBackColor = true;
-            this.BStart.Click += new System.EventHandler(this.BStart_Click);
             // 
             // HackerManPic
             // 
@@ -192,12 +187,127 @@
             this.Stone1.TabStop = false;
             this.Stone1.Tag = "wall";
             // 
+            // PBQuestion1
+            // 
+            this.PBQuestion1.Image = global::HackerManGame.Properties.Resources.qustion1;
+            this.PBQuestion1.Location = new System.Drawing.Point(80, 362);
+            this.PBQuestion1.Name = "PBQuestion1";
+            this.PBQuestion1.Size = new System.Drawing.Size(29, 28);
+            this.PBQuestion1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PBQuestion1.TabIndex = 17;
+            this.PBQuestion1.TabStop = false;
+            this.PBQuestion1.Tag = "question";
+            this.PBQuestion1.WaitOnLoad = true;
+            // 
+            // PBQuestion2
+            // 
+            this.PBQuestion2.Image = global::HackerManGame.Properties.Resources.qustion1;
+            this.PBQuestion2.Location = new System.Drawing.Point(306, 421);
+            this.PBQuestion2.Name = "PBQuestion2";
+            this.PBQuestion2.Size = new System.Drawing.Size(29, 28);
+            this.PBQuestion2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PBQuestion2.TabIndex = 19;
+            this.PBQuestion2.TabStop = false;
+            this.PBQuestion2.Tag = "question";
+            this.PBQuestion2.WaitOnLoad = true;
+            // 
+            // PBQuestion3
+            // 
+            this.PBQuestion3.Image = global::HackerManGame.Properties.Resources.qustion1;
+            this.PBQuestion3.Location = new System.Drawing.Point(540, 362);
+            this.PBQuestion3.Name = "PBQuestion3";
+            this.PBQuestion3.Size = new System.Drawing.Size(29, 28);
+            this.PBQuestion3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PBQuestion3.TabIndex = 20;
+            this.PBQuestion3.TabStop = false;
+            this.PBQuestion3.Tag = "question";
+            this.PBQuestion3.WaitOnLoad = true;
+            // 
+            // GBStart
+            // 
+            this.GBStart.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.GBStart.Controls.Add(this.label4);
+            this.GBStart.Controls.Add(this.label3);
+            this.GBStart.Controls.Add(this.pictureBox1);
+            this.GBStart.Controls.Add(this.pictureBox2);
+            this.GBStart.Controls.Add(this.BStart);
+            this.GBStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GBStart.Location = new System.Drawing.Point(-6, 30);
+            this.GBStart.Name = "GBStart";
+            this.GBStart.Size = new System.Drawing.Size(632, 438);
+            this.GBStart.TabIndex = 21;
+            this.GBStart.TabStop = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(323, 303);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(46, 24);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "vs.";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(273, 51);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(0, 13);
+            this.label3.TabIndex = 4;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::HackerManGame.Properties.Resources.HackermanPicRight;
+            this.pictureBox1.Location = new System.Drawing.Point(29, 44);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(233, 318);
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::HackerManGame.Properties.Resources.EnemyLeft;
+            this.pictureBox2.Location = new System.Drawing.Point(426, 44);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(239, 313);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
+            // 
+            // BStart
+            // 
+            this.BStart.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BStart.Location = new System.Drawing.Point(276, 375);
+            this.BStart.Name = "BStart";
+            this.BStart.Size = new System.Drawing.Size(141, 41);
+            this.BStart.TabIndex = 0;
+            this.BStart.Text = "START";
+            this.BStart.UseVisualStyleBackColor = true;
+            this.BStart.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::HackerManGame.Properties.Resources.ComputerPic;
+            this.pictureBox3.Location = new System.Drawing.Point(620, 12);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(62, 52);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 22;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Tag = "computer";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(684, 461);
             this.Controls.Add(this.GBStart);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.PBQuestion3);
+            this.Controls.Add(this.PBQuestion2);
+            this.Controls.Add(this.PBQuestion1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.HackerManPic);
@@ -213,7 +323,6 @@
             this.Text = "HackerMan";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
-            this.GBStart.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.HackerManPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Enemy3Pic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Enemy2Pic)).EndInit();
@@ -223,6 +332,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.Stone3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Stone2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Stone1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBQuestion1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBQuestion2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBQuestion3)).EndInit();
+            this.GBStart.ResumeLayout(false);
+            this.GBStart.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -241,9 +358,17 @@
         private System.Windows.Forms.PictureBox HackerManPic;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.PictureBox PBQuestion1;
+        private System.Windows.Forms.PictureBox PBQuestion2;
+        private System.Windows.Forms.PictureBox PBQuestion3;
         private System.Windows.Forms.GroupBox GBStart;
         private System.Windows.Forms.Button BStart;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        internal System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
 

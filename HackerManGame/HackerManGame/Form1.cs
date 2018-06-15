@@ -21,18 +21,25 @@ namespace HackerManGame
         int enemy2 = 6;
         int enemy3 = 8;
         int score = 0;
+        int qu= 20;
+        string[] Question = new string[5];
+       
+
+
 
         bool question = true;
         public Form1()
         {
             InitializeComponent();
-            label2.Visible = false;
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
+            Question[0] = "Question 1";
+            Question[1] = "Question 2";
+            Question[2] = "Question 3";
             
-            label1.Text = "Score: " + score;
+            
+           
+        }
+        public void HackerManMoves()
+        {
             if (goleft)
             {
                 HackerManPic.Left -= speed;
@@ -51,9 +58,17 @@ namespace HackerManGame
             {
                 HackerManPic.Top += speed;
             }
+        }
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+            label1.Text = "Score: " + score;
+            HackerManMoves();
             Enemy1Pic.Left += enemy1;
             Enemy2Pic.Left += enemy2;
             Enemy3Pic.Left += enemy3;
+            
+            timer1.Start();
             if (Enemy1Pic.Bounds.IntersectsWith(Stone1.Bounds))
             {
                 Enemy1Pic.Image = Properties.Resources.EnemyRight;
@@ -85,72 +100,132 @@ namespace HackerManGame
                 enemy3 = -enemy3;
             }
 
+            
+
             foreach (Control x in this.Controls)
             {
-                if (x is PictureBox &&  x.Tag == "enemy")
+                if (x is PictureBox && x.Tag == "enemy")
                 {
                     if (x.Bounds.IntersectsWith(HackerManPic.Bounds))
                     {
+                       
                         HackerManPic.Left = 0;
                         HackerManPic.Top = 5;
                         score = 0;
                         timer1.Stop();
-                        if (MessageBox.Show("Play Again", "End Game", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.No)
+                        System.Windows.Forms.DialogResult  BYesNo = MessageBox.Show("You lost ", "Game Over", MessageBoxButtons.OK);
+                        if (BYesNo == System.Windows.Forms.DialogResult.Yes)
                         {
-                            GBStart.Visible = true;
-                            GBStart.Enabled = true;
-                            
-                                                 
+                            GBStart.Visible = false;
+                            GBStart.Enabled = false;
+                        }
+                    }
+                }
+                if(x is PictureBox && x.Tag == "question")
+                {
+                   
+                    if (((PictureBox)x).Bounds.IntersectsWith(HackerManPic.Bounds))
+                    {
+                        timer1.Stop();
+                        Random r = new Random();
+                        int number = r.Next(0, 2);
+                        string str = Question[number];
+                       
+                        if (number == 0)
+                        {
+                            if (MessageBox.Show("Question 1", str, MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.No)
+                            {
+                                score += 10;
+                                this.Controls.Remove(x);
+                            }
+                            else
+                            {
+                                score -= 5;
+                                this.Controls.Remove(x);
+                            }
+                          //timer1.Start();
+
+                        }
+                        if (number == 1)
+                        {
+                            if (MessageBox.Show("Question 2", str, MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
+                            {
+                                score += 10;
+                                this.Controls.Remove(x);
+                            }
+                            else
+                            {
+                                score -= 5;
+                                this.Controls.Remove(x);
+                            }
+                          ///  timer1.Start();
+
+                        }
+                        if (number == 2)
+                        {
+                            if (MessageBox.Show("Question 3", str, MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.No)
+                            {
+                                score += 10;
+                                this.Controls.Remove(x);
+                            }
+                            else
+                            {
+                                score -= 5;
+                                this.Controls.Remove(x);
+                            }
+
+                           
+
+                        }
+                       // timer1.Start();
+
+
+
+                    }
+                                            
+                }
+                if (x is PictureBox && x.Tag == "computer")
+                {
+                  
+                    if (((PictureBox)x).Bounds.IntersectsWith(HackerManPic.Bounds))
+                    {
+                        timer1.Stop();
+
+                        ///TUKA TREBA DA TI SE OTVARA NOV LEVEL 
+                        if (score >= 0)
+                        {
+                            System.Windows.Forms.DialogResult YesNo = MessageBox.Show("Play next level", "You win", MessageBoxButtons.OK);
+                            if (YesNo == System.Windows.Forms.DialogResult.Yes)
+                            {
+                                GBStart.Visible = true;
+                                GBStart.Enabled = true;
+                            }
                         }
                         else
                         {
-                            GBStart.Visible = false;
-                            GBStart.Enabled =false;
-                            timer1_Tick(sender, e);
-                            timer1.Start();
-
-
+                            System.Windows.Forms.DialogResult BYesNo = MessageBox.Show("You lost ", "Game Over", MessageBoxButtons.OK);
+                            if (BYesNo == System.Windows.Forms.DialogResult.Yes)
+                            {
+                                GBStart.Visible = true;
+                                GBStart.Enabled = true;
+                            }
                         }
-
+                       
                     }
                 }
-                /*if (x is PictureBox && x.Tag == "question")
-                {
-                    if (question == true)
-                    {
-                        question = false;
-                        PBQuestion1.Image = Properties.Resources.qustion1;
-                        PBQuestion2.Image = Properties.Resources.qustion1;
-                        PBQuestion3.Image = Properties.Resources.qustion1;
-                        PBQuestion4.Image = Properties.Resources.qustion1;
-                    }
-                    else
-                    {
-                        question = true;
-                        PBQuestion1.Image = Properties.Resources.qustion2;
-                        PBQuestion2.Image = Properties.Resources.qustion2;
-                        PBQuestion3.Image = Properties.Resources.qustion2;
-                        PBQuestion4.Image = Properties.Resources.qustion2;
-                    }
-                }
-                */
 
             }
-
-
-
-
         }
-
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
+            timer1.Start();
             if (e.KeyCode == Keys.Left)
             {
                 goleft = true;
                 HackerManPic.Image = Properties.Resources.HackermanPicLeft;
 
             }
-            if(e.KeyCode == Keys.Right)
+            if (e.KeyCode == Keys.Right)
             {
                 goright = true;
                 HackerManPic.Image = Properties.Resources.HackermanPicRight;
@@ -170,6 +245,7 @@ namespace HackerManGame
 
         private void Form1_KeyUp(object sender, KeyEventArgs e)
         {
+            timer1.Start();
             if (e.KeyCode == Keys.Left)
             {
                 goleft = false;
@@ -177,7 +253,7 @@ namespace HackerManGame
             if (e.KeyCode == Keys.Right)
             {
                 goright = false;
-           }
+            }
             if (e.KeyCode == Keys.Down)
             {
                 godown = false;
@@ -189,11 +265,14 @@ namespace HackerManGame
 
         }
 
-        private void BStart_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            GBStart.Visible = false;
-            GBStart.Enabled = false;
-            timer1.Start();
+            {
+                GBStart.Visible = false;
+                GBStart.Enabled = false;
+                
+                timer1.Stop();
+            }
         }
     }
 }
