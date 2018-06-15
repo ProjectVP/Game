@@ -21,7 +21,11 @@ namespace HackerManGame
         int enemy2 = 6;
         int enemy3 = 8;
         int score = 0;
-
+        bool poml = false, pomr = false, pomu = false, pomd = false;
+        int desno = 930;
+        int dole = 614;
+        int gore = 0;
+        int levo = 0;
         bool question = true;
         public Form1()
         {
@@ -31,7 +35,7 @@ namespace HackerManGame
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            
+
             label1.Text = "Score: " + score;
             if (goleft)
             {
@@ -87,7 +91,7 @@ namespace HackerManGame
 
             foreach (Control x in this.Controls)
             {
-                if (x is PictureBox &&  x.Tag == "enemy")
+                if (x is PictureBox && x.Tag == "enemy")
                 {
                     if (x.Bounds.IntersectsWith(HackerManPic.Bounds))
                     {
@@ -99,48 +103,139 @@ namespace HackerManGame
                         {
                             GBStart.Visible = true;
                             GBStart.Enabled = true;
-                            
-                                                 
+                            godown = false;
+                            goleft = false;
+                            goright = false;
+                            goup = false;
                         }
                         else
                         {
                             GBStart.Visible = false;
-                            GBStart.Enabled =false;
+                            GBStart.Enabled = false;
                             timer1_Tick(sender, e);
                             timer1.Start();
-
-
+                            godown = false;
+                            goleft = false;
+                            goright = false;
+                            goup = false;
                         }
 
                     }
                 }
-                /*if (x is PictureBox && x.Tag == "question")
-                {
-                    if (question == true)
+                    if (Stone1.Bounds.IntersectsWith(HackerManPic.Bounds) || Stone2.Bounds.IntersectsWith(HackerManPic.Bounds) || Stone3.Bounds.IntersectsWith(HackerManPic.Bounds) || Stone4.Bounds.IntersectsWith(HackerManPic.Bounds) || Stone5.Bounds.IntersectsWith(HackerManPic.Bounds))
                     {
-                        question = false;
-                        PBQuestion1.Image = Properties.Resources.qustion1;
-                        PBQuestion2.Image = Properties.Resources.qustion1;
-                        PBQuestion3.Image = Properties.Resources.qustion1;
-                        PBQuestion4.Image = Properties.Resources.qustion1;
+                        if (poml)
+                        {
+                            HackerManPic.Left = HackerManPic.Left + 1;
+                            speed = 0;
+                        }
+                        if (pomr)
+                        {
+                            HackerManPic.Left = HackerManPic.Left - 1;
+                            speed = 0;
+                        }
+                        if (pomu)
+                        {
+                            HackerManPic.Top = HackerManPic.Top + 1;
+                            speed = 0;
+                        }
+                        if (pomd)
+                        {
+                            HackerManPic.Top = HackerManPic.Top - 1;
+                            speed = 0;
+                        }
                     }
                     else
                     {
-                        question = true;
-                        PBQuestion1.Image = Properties.Resources.qustion2;
-                        PBQuestion2.Image = Properties.Resources.qustion2;
-                        PBQuestion3.Image = Properties.Resources.qustion2;
-                        PBQuestion4.Image = Properties.Resources.qustion2;
-                    }
-                }
-                */
+                        speed = 5;
 
+                    }
             }
 
 
-
-
+            CharacterMove();
         }
+
+        /*if (x is PictureBox && x.Tag == "question")
+        {
+            if (question == true)
+            {
+                question = false;
+                PBQuestion1.Image = Properties.Resources.qustion1;
+                PBQuestion2.Image = Properties.Resources.qustion1;
+                PBQuestion3.Image = Properties.Resources.qustion1;
+                PBQuestion4.Image = Properties.Resources.qustion1;
+            }
+            else
+            {
+                question = true;
+                PBQuestion1.Image = Properties.Resources.qustion2;
+                PBQuestion2.Image = Properties.Resources.qustion2;
+                PBQuestion3.Image = Properties.Resources.qustion2;
+                PBQuestion4.Image = Properties.Resources.qustion2;
+            }
+        }
+        */
+        public void CharacterMove()
+        {
+            int desno = 650;
+            int dole = 400;
+            int gore = 0;
+            int levo = 0;
+            if (HackerManPic.Location.X < levo)
+            {
+                HackerManPic.Left = HackerManPic.Left + 1;
+                speed = 0;
+            }
+            else if (HackerManPic.Location.X > desno)
+            {
+                HackerManPic.Left = HackerManPic.Left - 1;
+                speed = 0;
+            }
+            else if (HackerManPic.Location.Y < gore)
+            {
+                HackerManPic.Top = HackerManPic.Top + 1;
+                speed = 0;
+            }
+            else if (HackerManPic.Location.Y > dole)
+            {
+                HackerManPic.Top = HackerManPic.Top - 1;
+                speed = 0;
+            }
+            else
+                speed = 5;
+        }
+        /*public void isBlock(PictureBox S)
+        {
+
+                int desno = S.Size.Width-S.Location.X;
+                int dole = S.Size.Height-S.Location.Y;
+                int gore = S.Location.Y;
+                int levo = S.Location.X;
+                if (HackerManPic.Location.X > levo)
+                {
+                    HackerManPic.Left = HackerManPic.Left - 1;
+                    speed = 0;
+                }
+                else if (HackerManPic.Location.X < desno)
+                {
+                    HackerManPic.Left = HackerManPic.Left + 1;
+                    speed = 0;
+                }
+                else if (HackerManPic.Location.Y > gore)
+                {
+                    HackerManPic.Top = HackerManPic.Top - 1;
+                    speed = 0;
+                }
+                else if (HackerManPic.Location.Y < dole)
+                {
+                    HackerManPic.Top = HackerManPic.Top + 1;
+                    speed = 0;
+                }
+                else
+                    speed = 5;
+
+        }*/
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
@@ -148,23 +243,26 @@ namespace HackerManGame
             {
                 goleft = true;
                 HackerManPic.Image = Properties.Resources.HackermanPicLeft;
+                poml = true; pomd = false; pomr = false;pomu = false;
 
             }
             if(e.KeyCode == Keys.Right)
             {
                 goright = true;
                 HackerManPic.Image = Properties.Resources.HackermanPicRight;
+                poml = false; pomd = false; pomr = true; pomu = false;
             }
             if (e.KeyCode == Keys.Down)
             {
                 godown = true;
                 HackerManPic.Image = Properties.Resources.HackermanPicLeft;
-
+                poml = false; pomd = true; pomr = false; pomu = false;
             }
             if (e.KeyCode == Keys.Up)
             {
                 goup = true;
                 HackerManPic.Image = Properties.Resources.HackermanPicRight;
+                poml = false; pomd = false; pomr = false; pomu = true;
             }
         }
 
