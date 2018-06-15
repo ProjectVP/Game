@@ -73,18 +73,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(2, 436);
+            this.label1.Location = new System.Drawing.Point(3, 537);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(46, 17);
             this.label1.TabIndex = 14;
             this.label1.Text = "label1";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(647, 436);
+            this.label2.Location = new System.Drawing.Point(863, 537);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.Size = new System.Drawing.Size(46, 17);
             this.label2.TabIndex = 15;
             this.label2.Text = "label2";
             // 
@@ -93,12 +95,38 @@
             this.timer1.Interval = 20;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+<<<<<<< HEAD
+=======
+            // GBStart
+            // 
+            this.GBStart.Controls.Add(this.BStart);
+            this.GBStart.Location = new System.Drawing.Point(6, 1);
+            this.GBStart.Margin = new System.Windows.Forms.Padding(4);
+            this.GBStart.Name = "GBStart";
+            this.GBStart.Padding = new System.Windows.Forms.Padding(4);
+            this.GBStart.Size = new System.Drawing.Size(942, 567);
+            this.GBStart.TabIndex = 16;
+            this.GBStart.TabStop = false;
+            // 
+            // BStart
+            // 
+            this.BStart.Location = new System.Drawing.Point(393, 252);
+            this.BStart.Margin = new System.Windows.Forms.Padding(4);
+            this.BStart.Name = "BStart";
+            this.BStart.Size = new System.Drawing.Size(100, 28);
+            this.BStart.TabIndex = 0;
+            this.BStart.Text = "start";
+            this.BStart.UseVisualStyleBackColor = true;
+            this.BStart.Click += new System.EventHandler(this.BStart_Click);
+            // 
+>>>>>>> b898699f4257c0fb85ab0d7b9df0e008de271c0a
             // HackerManPic
             // 
             this.HackerManPic.Image = ((System.Drawing.Image)(resources.GetObject("HackerManPic.Image")));
-            this.HackerManPic.Location = new System.Drawing.Point(12, 12);
+            this.HackerManPic.Location = new System.Drawing.Point(16, 15);
+            this.HackerManPic.Margin = new System.Windows.Forms.Padding(4);
             this.HackerManPic.Name = "HackerManPic";
-            this.HackerManPic.Size = new System.Drawing.Size(45, 52);
+            this.HackerManPic.Size = new System.Drawing.Size(60, 64);
             this.HackerManPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.HackerManPic.TabIndex = 13;
             this.HackerManPic.TabStop = false;
@@ -106,9 +134,10 @@
             // Enemy3Pic
             // 
             this.Enemy3Pic.Image = ((System.Drawing.Image)(resources.GetObject("Enemy3Pic.Image")));
-            this.Enemy3Pic.Location = new System.Drawing.Point(412, 70);
+            this.Enemy3Pic.Location = new System.Drawing.Point(549, 86);
+            this.Enemy3Pic.Margin = new System.Windows.Forms.Padding(4);
             this.Enemy3Pic.Name = "Enemy3Pic";
-            this.Enemy3Pic.Size = new System.Drawing.Size(35, 54);
+            this.Enemy3Pic.Size = new System.Drawing.Size(47, 66);
             this.Enemy3Pic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Enemy3Pic.TabIndex = 11;
             this.Enemy3Pic.TabStop = false;
@@ -117,9 +146,10 @@
             // Enemy2Pic
             // 
             this.Enemy2Pic.Image = ((System.Drawing.Image)(resources.GetObject("Enemy2Pic.Image")));
-            this.Enemy2Pic.Location = new System.Drawing.Point(300, 336);
+            this.Enemy2Pic.Location = new System.Drawing.Point(400, 414);
+            this.Enemy2Pic.Margin = new System.Windows.Forms.Padding(4);
             this.Enemy2Pic.Name = "Enemy2Pic";
-            this.Enemy2Pic.Size = new System.Drawing.Size(35, 54);
+            this.Enemy2Pic.Size = new System.Drawing.Size(47, 66);
             this.Enemy2Pic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Enemy2Pic.TabIndex = 10;
             this.Enemy2Pic.TabStop = false;
@@ -128,9 +158,10 @@
             // Enemy1Pic
             // 
             this.Enemy1Pic.Image = ((System.Drawing.Image)(resources.GetObject("Enemy1Pic.Image")));
-            this.Enemy1Pic.Location = new System.Drawing.Point(184, 61);
+            this.Enemy1Pic.Location = new System.Drawing.Point(245, 75);
+            this.Enemy1Pic.Margin = new System.Windows.Forms.Padding(4);
             this.Enemy1Pic.Name = "Enemy1Pic";
-            this.Enemy1Pic.Size = new System.Drawing.Size(35, 53);
+            this.Enemy1Pic.Size = new System.Drawing.Size(47, 65);
             this.Enemy1Pic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Enemy1Pic.TabIndex = 9;
             this.Enemy1Pic.TabStop = false;
@@ -140,9 +171,10 @@
             // 
             this.Stone5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Stone5.Image = ((System.Drawing.Image)(resources.GetObject("Stone5.Image")));
-            this.Stone5.Location = new System.Drawing.Point(540, -1);
+            this.Stone5.Location = new System.Drawing.Point(720, -1);
+            this.Stone5.Margin = new System.Windows.Forms.Padding(4);
             this.Stone5.Name = "Stone5";
-            this.Stone5.Size = new System.Drawing.Size(15, 327);
+            this.Stone5.Size = new System.Drawing.Size(20, 402);
             this.Stone5.TabIndex = 8;
             this.Stone5.TabStop = false;
             this.Stone5.Tag = "wall";
@@ -150,9 +182,10 @@
             // Stone4
             // 
             this.Stone4.Image = ((System.Drawing.Image)(resources.GetObject("Stone4.Image")));
-            this.Stone4.Location = new System.Drawing.Point(421, 136);
+            this.Stone4.Location = new System.Drawing.Point(561, 167);
+            this.Stone4.Margin = new System.Windows.Forms.Padding(4);
             this.Stone4.Name = "Stone4";
-            this.Stone4.Size = new System.Drawing.Size(15, 313);
+            this.Stone4.Size = new System.Drawing.Size(20, 385);
             this.Stone4.TabIndex = 7;
             this.Stone4.TabStop = false;
             this.Stone4.Tag = "wall";
@@ -160,9 +193,10 @@
             // Stone3
             // 
             this.Stone3.Image = ((System.Drawing.Image)(resources.GetObject("Stone3.Image")));
-            this.Stone3.Location = new System.Drawing.Point(311, 0);
+            this.Stone3.Location = new System.Drawing.Point(415, 0);
+            this.Stone3.Margin = new System.Windows.Forms.Padding(4);
             this.Stone3.Name = "Stone3";
-            this.Stone3.Size = new System.Drawing.Size(15, 326);
+            this.Stone3.Size = new System.Drawing.Size(20, 401);
             this.Stone3.TabIndex = 6;
             this.Stone3.TabStop = false;
             this.Stone3.Tag = "wall";
@@ -170,9 +204,10 @@
             // Stone2
             // 
             this.Stone2.Image = ((System.Drawing.Image)(resources.GetObject("Stone2.Image")));
-            this.Stone2.Location = new System.Drawing.Point(194, 120);
+            this.Stone2.Location = new System.Drawing.Point(259, 148);
+            this.Stone2.Margin = new System.Windows.Forms.Padding(4);
             this.Stone2.Name = "Stone2";
-            this.Stone2.Size = new System.Drawing.Size(15, 341);
+            this.Stone2.Size = new System.Drawing.Size(20, 420);
             this.Stone2.TabIndex = 5;
             this.Stone2.TabStop = false;
             this.Stone2.Tag = "wall";
@@ -180,9 +215,10 @@
             // Stone1
             // 
             this.Stone1.Image = ((System.Drawing.Image)(resources.GetObject("Stone1.Image")));
-            this.Stone1.Location = new System.Drawing.Point(94, 0);
+            this.Stone1.Location = new System.Drawing.Point(125, 0);
+            this.Stone1.Margin = new System.Windows.Forms.Padding(4);
             this.Stone1.Name = "Stone1";
-            this.Stone1.Size = new System.Drawing.Size(15, 326);
+            this.Stone1.Size = new System.Drawing.Size(20, 401);
             this.Stone1.TabIndex = 0;
             this.Stone1.TabStop = false;
             this.Stone1.Tag = "wall";
@@ -299,10 +335,15 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(684, 461);
+=======
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(934, 567);
+>>>>>>> b898699f4257c0fb85ab0d7b9df0e008de271c0a
             this.Controls.Add(this.GBStart);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.PBQuestion3);
@@ -319,6 +360,7 @@
             this.Controls.Add(this.Stone3);
             this.Controls.Add(this.Stone2);
             this.Controls.Add(this.Stone1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "HackerMan";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
