@@ -28,3 +28,13 @@ C:\Users\Dimitar\Desktop\Game\HackerManGame\HackerManGame\obj\Debug\HackerManGam
 C:\Users\Dimitar\Desktop\Game\HackerManGame\HackerManGame\obj\Debug\HackerManGame.csproj.CoreCompileInputs.cache
 C:\Users\Dimitar\Desktop\Game\HackerManGame\HackerManGame\obj\Debug\HackerManGame.exe
 C:\Users\Dimitar\Desktop\Game\HackerManGame\HackerManGame\obj\Debug\HackerManGame.pdb
+C:\Users\Dimitar\Desktop\HackerManGame\HackerManGame\obj\Debug\HackerManGame.csprojResolveAssemblyReference.cache
+C:\Users\Dimitar\Desktop\HackerManGame\HackerManGame\obj\Debug\HackerManGame.Form1.resources
+C:\Users\Dimitar\Desktop\HackerManGame\HackerManGame\obj\Debug\HackerManGame.Properties.Resources.resources
+C:\Users\Dimitar\Desktop\HackerManGame\HackerManGame\obj\Debug\HackerManGame.csproj.GenerateResource.cache
+C:\Users\Dimitar\Desktop\HackerManGame\HackerManGame\obj\Debug\HackerManGame.csproj.CoreCompileInputs.cache
+C:\Users\Dimitar\Desktop\HackerManGame\HackerManGame\obj\Debug\HackerManGame.exe
+C:\Users\Dimitar\Desktop\HackerManGame\HackerManGame\obj\Debug\HackerManGame.pdb
+C:\Users\Dimitar\Desktop\HackerManGame\HackerManGame\bin\Debug\HackerManGame.exe.config
+C:\Users\Dimitar\Desktop\HackerManGame\HackerManGame\bin\Debug\HackerManGame.exe
+C:\Users\Dimitar\Desktop\HackerManGame\HackerManGame\bin\Debug\HackerManGame.pdb

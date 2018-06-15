@@ -73,7 +73,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 537);
+            this.label1.Location = new System.Drawing.Point(13, 542);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 17);
@@ -95,31 +95,6 @@
             this.timer1.Interval = 20;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-<<<<<<< HEAD
-=======
-            // GBStart
-            // 
-            this.GBStart.Controls.Add(this.BStart);
-            this.GBStart.Location = new System.Drawing.Point(6, 1);
-            this.GBStart.Margin = new System.Windows.Forms.Padding(4);
-            this.GBStart.Name = "GBStart";
-            this.GBStart.Padding = new System.Windows.Forms.Padding(4);
-            this.GBStart.Size = new System.Drawing.Size(942, 567);
-            this.GBStart.TabIndex = 16;
-            this.GBStart.TabStop = false;
-            // 
-            // BStart
-            // 
-            this.BStart.Location = new System.Drawing.Point(393, 252);
-            this.BStart.Margin = new System.Windows.Forms.Padding(4);
-            this.BStart.Name = "BStart";
-            this.BStart.Size = new System.Drawing.Size(100, 28);
-            this.BStart.TabIndex = 0;
-            this.BStart.Text = "start";
-            this.BStart.UseVisualStyleBackColor = true;
-            this.BStart.Click += new System.EventHandler(this.BStart_Click);
-            // 
->>>>>>> b898699f4257c0fb85ab0d7b9df0e008de271c0a
             // HackerManPic
             // 
             this.HackerManPic.Image = ((System.Drawing.Image)(resources.GetObject("HackerManPic.Image")));
@@ -169,8 +144,8 @@
             // 
             // Stone5
             // 
+            this.Stone5.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.Stone5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Stone5.Image = ((System.Drawing.Image)(resources.GetObject("Stone5.Image")));
             this.Stone5.Location = new System.Drawing.Point(720, -1);
             this.Stone5.Margin = new System.Windows.Forms.Padding(4);
             this.Stone5.Name = "Stone5";
@@ -181,18 +156,18 @@
             // 
             // Stone4
             // 
-            this.Stone4.Image = ((System.Drawing.Image)(resources.GetObject("Stone4.Image")));
+            this.Stone4.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.Stone4.Location = new System.Drawing.Point(561, 167);
             this.Stone4.Margin = new System.Windows.Forms.Padding(4);
             this.Stone4.Name = "Stone4";
-            this.Stone4.Size = new System.Drawing.Size(20, 385);
+            this.Stone4.Size = new System.Drawing.Size(20, 401);
             this.Stone4.TabIndex = 7;
             this.Stone4.TabStop = false;
             this.Stone4.Tag = "wall";
             // 
             // Stone3
             // 
-            this.Stone3.Image = ((System.Drawing.Image)(resources.GetObject("Stone3.Image")));
+            this.Stone3.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.Stone3.Location = new System.Drawing.Point(415, 0);
             this.Stone3.Margin = new System.Windows.Forms.Padding(4);
             this.Stone3.Name = "Stone3";
@@ -203,7 +178,7 @@
             // 
             // Stone2
             // 
-            this.Stone2.Image = ((System.Drawing.Image)(resources.GetObject("Stone2.Image")));
+            this.Stone2.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.Stone2.Location = new System.Drawing.Point(259, 148);
             this.Stone2.Margin = new System.Windows.Forms.Padding(4);
             this.Stone2.Name = "Stone2";
@@ -214,7 +189,7 @@
             // 
             // Stone1
             // 
-            this.Stone1.Image = ((System.Drawing.Image)(resources.GetObject("Stone1.Image")));
+            this.Stone1.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.Stone1.Location = new System.Drawing.Point(125, 0);
             this.Stone1.Margin = new System.Windows.Forms.Padding(4);
             this.Stone1.Name = "Stone1";
@@ -226,7 +201,7 @@
             // PBQuestion1
             // 
             this.PBQuestion1.Image = global::HackerManGame.Properties.Resources.qustion1;
-            this.PBQuestion1.Location = new System.Drawing.Point(80, 362);
+            this.PBQuestion1.Location = new System.Drawing.Point(365, 12);
             this.PBQuestion1.Name = "PBQuestion1";
             this.PBQuestion1.Size = new System.Drawing.Size(29, 28);
             this.PBQuestion1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -238,7 +213,7 @@
             // PBQuestion2
             // 
             this.PBQuestion2.Image = global::HackerManGame.Properties.Resources.qustion1;
-            this.PBQuestion2.Location = new System.Drawing.Point(306, 421);
+            this.PBQuestion2.Location = new System.Drawing.Point(513, 497);
             this.PBQuestion2.Name = "PBQuestion2";
             this.PBQuestion2.Size = new System.Drawing.Size(29, 28);
             this.PBQuestion2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -250,7 +225,7 @@
             // PBQuestion3
             // 
             this.PBQuestion3.Image = global::HackerManGame.Properties.Resources.qustion1;
-            this.PBQuestion3.Location = new System.Drawing.Point(540, 362);
+            this.PBQuestion3.Location = new System.Drawing.Point(666, 15);
             this.PBQuestion3.Name = "PBQuestion3";
             this.PBQuestion3.Size = new System.Drawing.Size(29, 28);
             this.PBQuestion3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -268,9 +243,9 @@
             this.GBStart.Controls.Add(this.pictureBox2);
             this.GBStart.Controls.Add(this.BStart);
             this.GBStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.GBStart.Location = new System.Drawing.Point(-6, 30);
+            this.GBStart.Location = new System.Drawing.Point(-4, 0);
             this.GBStart.Name = "GBStart";
-            this.GBStart.Size = new System.Drawing.Size(632, 438);
+            this.GBStart.Size = new System.Drawing.Size(942, 568);
             this.GBStart.TabIndex = 21;
             this.GBStart.TabStop = false;
             // 
@@ -278,9 +253,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(323, 303);
+            this.label4.Location = new System.Drawing.Point(424, 225);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 24);
+            this.label4.Size = new System.Drawing.Size(60, 32);
             this.label4.TabIndex = 5;
             this.label4.Text = "vs.";
             // 
@@ -289,24 +264,25 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(273, 51);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 13);
+            this.label3.Size = new System.Drawing.Size(0, 17);
             this.label3.TabIndex = 4;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::HackerManGame.Properties.Resources.HackermanPicRight;
-            this.pictureBox1.Location = new System.Drawing.Point(29, 44);
+            this.pictureBox1.Location = new System.Drawing.Point(40, 44);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(233, 318);
+            this.pictureBox1.Size = new System.Drawing.Size(303, 394);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::HackerManGame.Properties.Resources.EnemyLeft;
-            this.pictureBox2.Location = new System.Drawing.Point(426, 44);
+            this.pictureBox2.Location = new System.Drawing.Point(555, 44);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(239, 313);
+            this.pictureBox2.Size = new System.Drawing.Size(304, 394);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
@@ -314,18 +290,18 @@
             // BStart
             // 
             this.BStart.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BStart.Location = new System.Drawing.Point(276, 375);
+            this.BStart.Location = new System.Drawing.Point(380, 466);
             this.BStart.Name = "BStart";
             this.BStart.Size = new System.Drawing.Size(141, 41);
             this.BStart.TabIndex = 0;
             this.BStart.Text = "START";
             this.BStart.UseVisualStyleBackColor = true;
-            this.BStart.Click += new System.EventHandler(this.button1_Click);
+            this.BStart.Click += new System.EventHandler(this.BStart_Click);
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::HackerManGame.Properties.Resources.ComputerPic;
-            this.pictureBox3.Location = new System.Drawing.Point(620, 12);
+            this.pictureBox3.Location = new System.Drawing.Point(862, 15);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(62, 52);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -337,13 +313,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-<<<<<<< HEAD
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(684, 461);
-=======
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(934, 567);
->>>>>>> b898699f4257c0fb85ab0d7b9df0e008de271c0a
+            this.ClientSize = new System.Drawing.Size(936, 568);
             this.Controls.Add(this.GBStart);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.PBQuestion3);
