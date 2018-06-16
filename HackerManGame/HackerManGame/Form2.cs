@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace HackerManGame
 {
-    public partial class Form1 : Form
+    public partial class Form2 : Form
     {
         bool goup;
         bool godown;
@@ -21,8 +21,8 @@ namespace HackerManGame
         int enemy2 = 6;
         int enemy3 = 8;
         int score = 0;
-        
-        int qu= 20;
+
+        int qu = 20;
         string[] Question = new string[5];
 
         bool poml = false, pomr = false, pomu = false, pomd = false;
@@ -32,30 +32,26 @@ namespace HackerManGame
         int levo = 0;
         int vreme = 150;
         bool question = true;
-
-
-        public Form1()
+        public Form2()
         {
             InitializeComponent();
             Question[0] = "Question 1";
             Question[1] = "Question 2";
             Question[2] = "Question 3";
-            toolStripStatusLabel1.Visible = false;
             toolStripProgressBar1.Minimum = 0;
             toolStripProgressBar1.Maximum = 150;
-            //toolStripStatusLabel2.Visible = false;
-
-        }
-
-        private void BStart_Click(object sender, EventArgs e)
-        {
             GBStart.Visible = false;
             GBStart.Enabled = false;
             toolStripStatusLabel1.Visible = true;
-            //toolStripStatusLabel2.Visible = true;
             timer1.Start();
             timer2.Start();
         }
+        /*
+        private void BStart_Click(object sender, EventArgs e)
+        {
+
+
+        }*/
 
         private void Form1_KeyUp(object sender, KeyEventArgs e)
         {
@@ -86,12 +82,6 @@ namespace HackerManGame
                 goleft = true;
                 HackerManPic.Image = Properties.Resources.HackermanPicLeft;
                 poml = true; pomd = false; pomr = false; pomu = false;
-
-            }
-            if (e.KeyCode == Keys.Left&& e.KeyCode==Keys.Right)
-            {
-                goleft = false; goright = false;
-                poml = false; pomd = false; pomr = false; pomu = false;
 
             }
             if (e.KeyCode == Keys.Right)
@@ -171,7 +161,7 @@ namespace HackerManGame
             Enemy1Pic.Left += enemy1;
             Enemy2Pic.Left += enemy2;
             Enemy3Pic.Left += enemy3;
-            
+
             timer1.Start();
             timer2.Start();
             if (Enemy1Pic.Bounds.IntersectsWith(Stone1.Bounds))
@@ -205,7 +195,7 @@ namespace HackerManGame
                 enemy3 = -enemy3;
             }
 
-            
+
 
             foreach (Control x in this.Controls)
             {
@@ -213,15 +203,15 @@ namespace HackerManGame
                 {
                     if (x.Bounds.IntersectsWith(HackerManPic.Bounds))
                     {
-                       
+
                         HackerManPic.Left = 0;
                         HackerManPic.Top = 5;
                         score = 0;
                         timer1.Stop();
-                        System.Windows.Forms.DialogResult  BYesNo = MessageBox.Show("                 You lost\n Do you want to play again? ", "Game Over", MessageBoxButtons.YesNo);
+                        System.Windows.Forms.DialogResult BYesNo = MessageBox.Show("                 You lost\n Do you want to play again? ", "Game Over", MessageBoxButtons.YesNo);
                         if (BYesNo == System.Windows.Forms.DialogResult.Yes)
                         {
-                            vreme = 150;
+
                             GBStart.Visible = true;
                             GBStart.Enabled = true;
                             godown = false;
@@ -229,11 +219,6 @@ namespace HackerManGame
                             goright = false;
                             goup = false;
                             score = 0;
-
-                            this.Controls.Add(PBQuestion1);
-                            this.Controls.Add(PBQuestion2);
-                            this.Controls.Add(PBQuestion3);
-
                         }
                         if (BYesNo == System.Windows.Forms.DialogResult.No)
                         {
@@ -241,9 +226,9 @@ namespace HackerManGame
                         }
                     }
                 }
-                if(x is PictureBox && x.Tag == "question")
+                if (x is PictureBox && x.Tag == "question")
                 {
-                   
+
                     if (((PictureBox)x).Bounds.IntersectsWith(HackerManPic.Bounds))
                     {
                         timer1.Stop();
@@ -251,7 +236,7 @@ namespace HackerManGame
                         Random r = new Random();
                         int number = r.Next(0, 2);
                         string str = Question[number];
-                       
+
                         if (number == 0)
                         {
                             if (MessageBox.Show("Question 1", str, MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.No)
@@ -271,7 +256,7 @@ namespace HackerManGame
                                 goleft = false;
                                 goright = false;
                                 goup = false;
-                            }                         
+                            }
 
                         }
                         if (number == 1)
@@ -324,19 +309,23 @@ namespace HackerManGame
                 }
                 if (x is PictureBox && x.Tag == "computer")
                 {
-                  
+
                     if (((PictureBox)x).Bounds.IntersectsWith(HackerManPic.Bounds))
                     {
                         timer1.Stop();
                         timer2.Stop();
 
                         ///TUKA TREBA DA TI SE OTVARA NOV LEVEL 
-                        if (score > 0)
+                        if (score >= 0)
                         {
-                            this.Visible = false;
-                            Form2 f2 = new Form2();
+                            System.Windows.Forms.DialogResult YesNo = MessageBox.Show("Play next level", "You win", MessageBoxButtons.OK);
+                            if (YesNo == System.Windows.Forms.DialogResult.Yes)
+                            {
+                                GBStart.Visible = true;
+                                GBStart.Enabled = true;
+                            }
                         }
-                       /* else
+                        else
                         {
                             System.Windows.Forms.DialogResult BYesNo = MessageBox.Show("                 You lost\n Do you want to play again? ", "Game Over", MessageBoxButtons.YesNo);
                             if (BYesNo == System.Windows.Forms.DialogResult.Yes)
@@ -354,40 +343,40 @@ namespace HackerManGame
                             {
                                 this.Close();
                             }
-                        }*/
-                       
+                        }
+
                     }
                 }
-                    if (Stone1.Bounds.IntersectsWith(HackerManPic.Bounds) || Stone2.Bounds.IntersectsWith(HackerManPic.Bounds) || Stone3.Bounds.IntersectsWith(HackerManPic.Bounds) || Stone4.Bounds.IntersectsWith(HackerManPic.Bounds) || Stone5.Bounds.IntersectsWith(HackerManPic.Bounds))
+                if (Stone1.Bounds.IntersectsWith(HackerManPic.Bounds) || Stone2.Bounds.IntersectsWith(HackerManPic.Bounds) || Stone3.Bounds.IntersectsWith(HackerManPic.Bounds) || Stone4.Bounds.IntersectsWith(HackerManPic.Bounds) || Stone5.Bounds.IntersectsWith(HackerManPic.Bounds))
+                {
+                    if (poml)
                     {
-                        if (poml)
-                        {
-                            HackerManPic.Left = HackerManPic.Left + 1;
-                            speed = 0;
-                        }
-                        if (pomr)
-                        {
-                            HackerManPic.Left = HackerManPic.Left - 1;
-                            speed = 0;
-                        }
-                        if (pomu)
-                        {
-                            HackerManPic.Top = HackerManPic.Top + 1;
-                            speed = 0;
-                        }
-                        if (pomd)
-                        {
-                            HackerManPic.Top = HackerManPic.Top - 1;
-                            speed = 0;
-                        }
+                        HackerManPic.Left = HackerManPic.Left + 1;
+                        speed = 0;
                     }
-                    else
+                    if (pomr)
                     {
-                        speed = 5;
+                        HackerManPic.Left = HackerManPic.Left - 1;
+                        speed = 0;
                     }
+                    if (pomu)
+                    {
+                        HackerManPic.Top = HackerManPic.Top + 1;
+                        speed = 0;
+                    }
+                    if (pomd)
+                    {
+                        HackerManPic.Top = HackerManPic.Top - 1;
+                        speed = 0;
+                    }
+                }
+                else
+                {
+                    speed = 5;
+                }
             }
             CharacterMove();
-           
+
         }
 
         public void CharacterMove()

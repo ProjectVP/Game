@@ -38,3 +38,4 @@ C:\Users\Dimitar\Desktop\HackerManGame\HackerManGame\obj\Debug\HackerManGame.pdb
 C:\Users\Dimitar\Desktop\HackerManGame\HackerManGame\bin\Debug\HackerManGame.exe.config
 C:\Users\Dimitar\Desktop\HackerManGame\HackerManGame\bin\Debug\HackerManGame.exe
 C:\Users\Dimitar\Desktop\HackerManGame\HackerManGame\bin\Debug\HackerManGame.pdb
+C:\Users\Dimitar\Desktop\Game\HackerManGame\HackerManGame\obj\Debug\HackerManGame.Form2.resources
