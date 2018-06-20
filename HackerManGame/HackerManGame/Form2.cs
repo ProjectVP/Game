@@ -43,7 +43,7 @@ namespace HackerManGame
             GBStart.Visible = false;
             GBStart.Enabled = false;
             toolStripStatusLabel1.Visible = true;
-            timer1.Start();
+            //timer1.Start();
             timer2.Start();
         }
         /*
@@ -129,6 +129,11 @@ namespace HackerManGame
                     this.Close();
                 }
             }
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            timer1.Start();
         }
 
         public void HackerManMoves()
@@ -318,12 +323,14 @@ namespace HackerManGame
                         ///TUKA TREBA DA TI SE OTVARA NOV LEVEL 
                         if (score >= 0)
                         {
-                            System.Windows.Forms.DialogResult YesNo = MessageBox.Show("Play next level", "You win", MessageBoxButtons.OK);
+                            /*System.Windows.Forms.DialogResult YesNo = MessageBox.Show("Play next level", "You win", MessageBoxButtons.OK);
                             if (YesNo == System.Windows.Forms.DialogResult.Yes)
                             {
                                 GBStart.Visible = true;
                                 GBStart.Enabled = true;
-                            }
+                            }*/
+                            DialogResult = System.Windows.Forms.DialogResult.OK;
+
                         }
                         else
                         {

@@ -55,6 +55,7 @@ namespace HackerManGame
             //toolStripStatusLabel2.Visible = true;
             timer1.Start();
             timer2.Start();
+
         }
 
         private void Form1_KeyUp(object sender, KeyEventArgs e)
@@ -111,6 +112,14 @@ namespace HackerManGame
                 goup = true;
                 HackerManPic.Image = Properties.Resources.HackermanPicRight;
                 poml = false; pomd = false; pomr = false; pomu = true;
+            }
+            if (e.KeyCode == Keys.P)
+            {
+                pauseGame();
+            }
+            if (e.KeyCode == Keys.S)
+            {
+                startGame();
             }
         }
 
@@ -324,39 +333,31 @@ namespace HackerManGame
                 }
                 if (x is PictureBox && x.Tag == "computer")
                 {
-                  
+
                     if (((PictureBox)x).Bounds.IntersectsWith(HackerManPic.Bounds))
                     {
                         timer1.Stop();
                         timer2.Stop();
-
-                        ///TUKA TREBA DA TI SE OTVARA NOV LEVEL 
                         if (score > 0)
                         {
-                            this.Visible = false;
-                            Form2 f2 = new Form2();
-                        }
-                       /* else
-                        {
-                            System.Windows.Forms.DialogResult BYesNo = MessageBox.Show("                 You lost\n Do you want to play again? ", "Game Over", MessageBoxButtons.YesNo);
-                            if (BYesNo == System.Windows.Forms.DialogResult.Yes)
+                            System.Windows.Forms.DialogResult YesNo = MessageBox.Show("Play next level", "You win", MessageBoxButtons.OK);
+                            if (YesNo == System.Windows.Forms.DialogResult.Yes)
                             {
-
                                 GBStart.Visible = true;
                                 GBStart.Enabled = true;
-                                godown = false;
-                                goleft = false;
-                                goright = false;
-                                goup = false;
-                                score = 0;
                             }
-                            if (BYesNo == System.Windows.Forms.DialogResult.No)
-                            {
-                                this.Close();
-                            }
-                        }*/
-                       
-                    }
+                        }
+                        else
+                        {
+                            MessageBox.Show("You haven't gathered enough points for next level", "Not quite there yet", MessageBoxButtons.OK);
+                            timer1.Start();
+                            timer2.Start();
+                            HackerManPic.Left = 0;
+                            HackerManPic.Top = 5;
+                        }
+                        
+                    }              
+
                 }
                     if (Stone1.Bounds.IntersectsWith(HackerManPic.Bounds) || Stone2.Bounds.IntersectsWith(HackerManPic.Bounds) || Stone3.Bounds.IntersectsWith(HackerManPic.Bounds) || Stone4.Bounds.IntersectsWith(HackerManPic.Bounds) || Stone5.Bounds.IntersectsWith(HackerManPic.Bounds))
                     {
@@ -418,6 +419,16 @@ namespace HackerManGame
             }
             else
                 speed = 5;
+        }
+        public void pauseGame()
+        {
+            timer1.Stop();
+            timer2.Stop();
+        }
+        public void startGame()
+        {
+            timer1.Start();
+            timer2.Start();
         }
     }
 }
